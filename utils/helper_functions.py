@@ -15,7 +15,7 @@ __all__ = [
     "PromptTemplate",
     "replace_tab_with_space",
     "encode_pdf",
-    "show_related_docs"
+    "show_context"
 ]
 
 def replace_tab_with_space(list_of_documents):
@@ -40,7 +40,7 @@ def encode_pdf(file_path,chunk_size=1000,chunk_overlap=500):
 
     return vectorstore
 
-def show_related_docs(context):
+def show_context(context):
     for i,c in enumerate(context):
         print(f"Context:{i+1}")
         print(c)
